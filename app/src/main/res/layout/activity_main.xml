@@ -1,54 +1,62 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutmain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
-    android:id="@+id/layoutmain"
-    >
+    tools:context=".MainActivity">
 
     <org.opencv.android.JavaCameraView
+        android:id="@+id/jvcamera"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:id="@+id/jvcamera"
-        android:visibility="gone"
         android:layout_alignParentTop="true"
-        />
+        android:visibility="gone" />
+
     <ImageView
         android:id="@+id/iv"
         android:layout_width="wrap_content"
         android:layout_height="200px"
-        android:background="#00FF00"
         android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true">
-    </ImageView>
+        android:layout_alignParentTop="true"
+        android:background="#00FF00"></ImageView>
+
     <TextView
         android:id="@+id/tv"
         android:layout_width="150px"
         android:layout_height="100px"
-        android:background="#00FF00"
         android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@+id/iv">
-    </TextView>
+        android:layout_toLeftOf="@+id/iv"
+        android:background="#00FF00"></TextView>
+
     <Spinner
         android:id="@+id/sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:background="#00FF00"
-        />
+        android:background="#00FF00" />
+
     <TextView
         android:id="@+id/tvocr"
         android:layout_width="wrap_content"
         android:layout_height="100px"
-        android:textColor="#00FF00"
-        android:textStyle="bold"
-        android:textSize="80px"
-        android:text=""
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true">
-    </TextView>
+        android:layout_centerHorizontal="true"
+        android:text=""
+        android:textColor="#00FF00"
+        android:textSize="80px"
+        android:textStyle="bold"></TextView>
 
-
-
+    <ImageView
+        android:id="@+id/ivplate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="30px"
+        android:layout_marginRight="30px"
+        android:background="#00FF00"></ImageView>
 </RelativeLayout>

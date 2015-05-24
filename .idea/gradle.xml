@@ -7,9 +7,9 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
           <set>
-            <option value="/Volumes/Mars/Users/natuan/AndroidFromGitHub/UITRomania" />
-            <option value="/Volumes/Mars/Users/natuan/AndroidFromGitHub/UITRomania/app" />
-            <option value="/Volumes/Mars/Users/natuan/AndroidFromGitHub/UITRomania/openCVLibrary2410" />
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/openCVLibrary2410" />
           </set>
         </option>
       </GradleProjectSettings>
