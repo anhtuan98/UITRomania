@@ -395,8 +395,6 @@ public class MainActivity extends Activity implements CvCameraViewListener2 {
             }
         });
 
-        //	RecognitionAsynTask a = new RecognitionAsynTask(this);
-        //	a.execute("");
 
         tv.setText("bien testttt" + teststtt);
         Spinner spinner = (Spinner) findViewById(R.id.sp);
@@ -406,6 +404,7 @@ public class MainActivity extends Activity implements CvCameraViewListener2 {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
         spinner.setAdapter(adapter);
+
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
             public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2,
@@ -421,18 +420,10 @@ public class MainActivity extends Activity implements CvCameraViewListener2 {
                 }
 
             }
-
             public void onNothingSelected(AdapterView<?> arg0) {
-                // TODO Auto-generated method stub
-
             }
         });
-        //Toast.makeText(getBaseContext(), "You selected : " + actions[itemPosition]  , Toast.LENGTH_SHORT).show();
-
-        //     l_Plates = new ArrayList<Rect>();
-
-
-    }
+    } // End of onCreate()
 
     @Override
     public void onPause() {
@@ -516,7 +507,7 @@ public class MainActivity extends Activity implements CvCameraViewListener2 {
                         public void run() {
                             Bitmap matTransfom = Bitmap.createBitmap(mtemp.cols(), mtemp.rows(), Bitmap.Config.ARGB_8888);
                             Utils.matToBitmap(mtemp, matTransfom);
-                            ivplate.setImageBitmap(matTransfom);
+                           // ivplate.setImageBitmap(matTransfom); // Tuan comments on 24/5/15
                         }
                     });
 
@@ -526,7 +517,7 @@ public class MainActivity extends Activity implements CvCameraViewListener2 {
             }
         }
         return mrbga;
-    }
+    } // End of onCameraFrame()
 
 
 }//End activity

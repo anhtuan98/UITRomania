@@ -17,3 +17,24 @@ allprojects {
         jcenter()
     }
 }
+ext {
+    robolectricVersion = "3.0-SNAPSHOT"
+}
+
+subprojects {
+    buildscript {
+        repositories {
+            jcenter()
+        }
+
+        dependencies {
+            classpath "com.android.tools.build:gradle:1.1.0"
+        }
+    }
+
+    repositories {
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+        mavenLocal()
+        mavenCentral()
+    }
+}
